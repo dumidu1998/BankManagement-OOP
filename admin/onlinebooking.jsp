@@ -11,7 +11,7 @@
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Com Bank</title>
+    <title>Hello, world!</title>
 </head>
 
 <body onload="load([1,2,4,5,13,18,25,30])">
@@ -23,20 +23,20 @@
                     class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 ">
                     <a href="#"
                         class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-5 d-none d-sm-inline"><img src="assets/logo.png" width="60px" alt=""> Com Bank
-                        </span>
+                        <span class="fs-5 d-none d-sm-inline">Wills Film <img src="../assets/logo.png" width="60px"
+                                alt=""></span>
                     </a>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
                         id="menu">
                         <li class="nav-item">
-                            <a href="adminbookwindow.jsp" class="nav-link align-middle px-0 aactive">
+                            <a href="adminbookwindow.jsp" class="nav-link align-middle px-0 ">
                                 <i class="fs-4 bi-house"><img src="../assets/booking.png" width="50px" alt=""></i> <span
                                     class="ms-1 d-none d-sm-inline" style="color: white;">Booking
                                     window</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="onlinebooking.jsp" class="nav-link align-middle px-0 ">
+                            <a href="onlinebooking.jsp" class="nav-link align-middle px-0 aactive">
                                 <i class="fs-4 bi-house"><img src="../assets/onlineticket.png" width="50px" alt=""></i>
                                 <span class="ms-1 d-none d-sm-inline" style="color: white;">Online Booking
                                 </span>
@@ -66,11 +66,11 @@
                     <div class="dropdown pb-4">
                         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                             id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="assets/avatar.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30"
+                                class="rounded-circle">
                             <span class="d-none d-sm-inline mx-1">Admin</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
                             <li><a class="dropdown-item" href="#">Sign out</a></li>
                         </ul>
                     </div>
@@ -79,17 +79,58 @@
 
         </div>
     </div>
-    <div style="min-height:92vh">
+    <div class="admin-cont">
+        <div class="admin_container">
+            <h2 class="mt-5">Online Booking Ticket Printing Window</h2>
+            <form class="row g-3" method="GET">
 
-    </div>
-    <footer class="bg-light text-center text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2021 Copyright:
-            <a class="text-dark" href="https://combank.lk/">Com Bank</a>
+                <div class="col-auto">
+                    <label for="id" class="visually-hidden">Password</label>
+                    <input type="text" name="id"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                        class="form-control" id="id" placeholder="Booking id">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" name="submit" class="btn btn-primary mb-3">Check</button>
+                </div>
+            </form>
+            <div>
+                <table class="table admin-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Film</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col"># of tickets</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark suckerburg</td>
+                            <td>2021-10-12</td>
+                            <td>9.00 a.m</td>
+                            <td>3</td>
+                            <td>Kasun bandara</td>
+                            <td>Booked</td>
+                            <td><img class="cursor" src="../assets/print.png" width="40" onclick="" alt=""></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+
         </div>
-        <!-- Copyright -->
-    </footer>
+    </div>
+
 </body>
+
+
 
 </html>

@@ -11,10 +11,10 @@
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Com Bank</title>
+    <title>Hello, world!</title>
 </head>
 
-<body onload="load([1,2,4,5,13,18,25,30])">
+<body>
     <div class="container-fluid ">
         <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark "
@@ -23,23 +23,16 @@
                     class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 ">
                     <a href="#"
                         class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-5 d-none d-sm-inline"><img src="assets/logo.png" width="60px" alt=""> Com Bank
-                        </span>
+                        <span class="fs-5 d-none d-sm-inline">Wills Film <img src="../assets/logo.png" width="60px"
+                                alt=""></span>
                     </a>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
                         id="menu">
                         <li class="nav-item">
-                            <a href="adminbookwindow.jsp" class="nav-link align-middle px-0 aactive">
+                            <a href="adminbookwindow.jsp" class="nav-link align-middle px-0 ">
                                 <i class="fs-4 bi-house"><img src="../assets/booking.png" width="50px" alt=""></i> <span
                                     class="ms-1 d-none d-sm-inline" style="color: white;">Booking
                                     window</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="onlinebooking.jsp" class="nav-link align-middle px-0 ">
-                                <i class="fs-4 bi-house"><img src="../assets/onlineticket.png" width="50px" alt=""></i>
-                                <span class="ms-1 d-none d-sm-inline" style="color: white;">Online Booking
-                                </span>
                             </a>
                         </li>
                         <li>
@@ -49,7 +42,7 @@
 
                         </li>
                         <li>
-                            <a href="movielist.jsp" class="nav-link px-0 align-middle">
+                            <a href="movielist.jsp" class="nav-link px-0 align-middle aactive">
                                 <i class="fs-4 bi-table"><img src="../assets/curmovie.png" width="50px" alt=""></i>
                                 <span class="ms-1 d-none d-sm-inline" style="color: white;">Movie List</span></a>
                         </li>
@@ -66,11 +59,11 @@
                     <div class="dropdown pb-4">
                         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                             id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="assets/avatar.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30"
+                                class="rounded-circle">
                             <span class="d-none d-sm-inline mx-1">Admin</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
                             <li><a class="dropdown-item" href="#">Sign out</a></li>
                         </ul>
                     </div>
@@ -79,17 +72,55 @@
 
         </div>
     </div>
-    <div style="min-height:92vh">
+    <div class="admin-cont">
+        <div class="card">
+            <form method="GET" action="">
+                <h5 class="card-header"><input type="text" id="title" class="form-control" value="Kamaii - 2020"
+                        readonly>
+                </h5>
+                <div class="card-body">
+                    <img src="../assets/medium-cover.jpg" class="col-md-2 me-5 float-md-end mb-5 ms-md-1" alt="">
+                    <h6 class="card-title">Director<input id="dir" type="text" class="form-control"
+                            value="Special title treatment" readonly>
+                    </h6>
+                    <h6 class="card-title">Producer<input id="pro" type="text" class="form-control"
+                            value="Special title treatment" readonly>
+                    </h6>
+                    <h6 class="card-title">Cast<input id="cast" type="text" class="form-control"
+                            value="Special title treatment" readonly>
+                    </h6>
+                    <p class="card-text">Ends in <input id="date" type="date" class="form-control" readonly></p>
 
-    </div>
-    <footer class="bg-light text-center text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2021 Copyright:
-            <a class="text-dark" href="https://combank.lk/">Com Bank</a>
+                    <a href="#" class="btn btn-outline-danger"><img src="../assets/delete.png"></a>
+                    <a href="#" class="btn btn-outline-warning" onclick="edit()" id="edit"><img
+                            src="../assets/edit.png"></a>
+                    <button class="btn btn-outline-success" id="submit" style="display: none;"><img
+                            src="../assets/done.png"></button>
+
+                </div>
+            </form>
         </div>
-        <!-- Copyright -->
-    </footer>
+    </div>
+    </div>
 </body>
+<script>
+    function edit() {
+        document.getElementById('submit').style.display = '';
+        document.getElementById('edit').style.display = 'none';
+        document.getElementById('title').removeAttribute("readonly");
+        document.getElementById('dir').removeAttribute("readonly");
+        document.getElementById('pro').removeAttribute("readonly");
+        document.getElementById('cast').removeAttribute("readonly");
+        document.getElementById('date').removeAttribute("readonly");
+        document.getElementById('9').removeAttribute("disabled");
+        document.getElementById('11').removeAttribute("disabled");
+        document.getElementById('4').removeAttribute("disabled");
+        document.getElementById('7').removeAttribute("disabled");
+        document.getElementById('10').removeAttribute("disabled");
+
+    }
+
+
+</script>
 
 </html>
