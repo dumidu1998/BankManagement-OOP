@@ -143,6 +143,21 @@ p.text span {
   box-sizing: content-box;
 }
 
+.textnorm{
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.textnormh2{
+  font-size: 30px;
+  font-weight: normal;
+}
+
+
+.aaactive{
+  /* background-color: red !important; */
+  color:  rgb(55, 55, 226) !important;
+}
 
 
 
@@ -231,3 +246,10 @@ p.text span {
         box-shadow: inset 0px 0px 0px 30px #4bb71b;
     }
 }
+
+
+
+
+
+
+
