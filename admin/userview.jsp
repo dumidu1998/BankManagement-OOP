@@ -10,12 +10,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin/style.css">
     <title>Com Bank</title>
 </head>
 
 <body>
-    <div class="container-fluid ">
+    <div class="container-fluid">
         <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark "
                 style="position: fixed;top: 0;left: 0;z-index: 1;">
@@ -29,48 +29,36 @@
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
                         id="menu">
                         <li class="nav-item">
-                            <a href="adminbookwindow.jsp" class="nav-link align-middle px-0 aactive">
-                                <i class="fs-4 bi-house"><img src="../assets/booking.png" width="50px" alt=""></i> <span
-                                    class="ms-1 d-none d-sm-inline" style="color: white;">Transaction
-                                    window</span>
+                            <a href="dashboard.jsp" class="nav-link align-middle px-0 ">
+                                <i class="fs-4 bi-house"><img src="assets/dashboard.png" width="50px" alt=""></i> <span
+                                    class="ms-1 d-none d-sm-inline " style="color: white;">Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="onlinebooking.jsp" class="nav-link align-middle px-0 ">
-                                <i class="fs-4 bi-house"><img src="../assets/onlineticket.png" width="50px" alt=""></i>
-                                <span class="ms-1 d-none d-sm-inline" style="color: white;">View Users
+                            <a href="transactionWindow.jsp" class="nav-link align-middle px-0 ">
+                                <i class="fs-4 bi-house"><img src="assets/trans.png" width="50px" alt=""></i>
+                                <span class="ms-1 d-none d-sm-inline" style="color: white;">Transaction
+                                    window
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a href="addmovie.jsp" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-speedometer2"><img src="../assets/mov.png" width="50px" alt=""></i>
-                                <span class="ms-1 d-none d-sm-inline" style="color: white;">Add Movie</span> </a>
+                            <a href="userview.jsp" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2"><img src="assets/profile.png" width="50px" alt=""></i>
+                                <span class="ms-1 d-none d-sm-inline aaactive" style="color: white;">Users</span> </a>
 
                         </li>
-                        <li>
-                            <a href="movielist.jsp" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-table"><img src="../assets/curmovie.png" width="50px" alt=""></i>
-                                <span class="ms-1 d-none d-sm-inline" style="color: white;">Movie List</span></a>
-                        </li>
 
-
-                        <li>
-                            <a href="bookings.jsp" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-people"><img src="../assets/booked.png" width="50px" alt=""></i> <span
-                                    class="ms-1 d-none d-sm-inline" style="color: white;">Bookings</span>
-                            </a>
-                        </li>
                     </ul>
                     <hr>
                     <div class="dropdown pb-4">
                         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                             id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="assets/avatar.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                            <span class="d-none d-sm-inline mx-1">Admin</span>
+                            <span class="d-none d-sm-inline mx-1">Logged Name</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="profile.jsp">Profile</a></li>
                             <li><a class="dropdown-item" href="#">Sign out</a></li>
                         </ul>
                     </div>
@@ -79,8 +67,42 @@
 
         </div>
     </div>
-    <div style="min-height:92vh">
+    <div style="min-height:92vh;" class="d-block">
+        <div style="position: relative;left: 18%; width:70%">
+            <h2 class="d-flex mx-auto">Search User</h2>
+            <div class="input-group mb-3 ms-3 mt-5">
+                <input type=" text" class="form-control" placeholder="Account Number, Name, ID No"
+                    aria-label="Account Number" aria-describedby="button-addon2">
+                <button class="btn btn-outline-primary" type="button" id="button-addon2">🔍 Find</button>
+            </div>
+            <!--  View all before search -->
+            <div>
+                <table class="table table-striped table-hover ms-4">
+                    <tr class="table-primary">
+                        <th>Acc. No</th>
+                        <th>ID No.</th>
+                        <th>Name</th>
+                        <th>Balance</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>1598412</td>
+                        <td>972580125v</td>
+                        <td>K.M.L. Gamage</td>
+                        <td>Rs. 15,000.00</td>
+                        <td><a href="user.jsp?accno=1598412">View More</a></td>
+                    </tr>
+                    <tr>
+                        <td>1598412</td>
+                        <td>972580125v</td>
+                        <td>K.M.L. Gamage</td>
+                        <td>Rs. 15,000.00</td>
+                        <td><a href="user.jsp?accno=1598412">View More</a></td>
+                    </tr>
 
+                </table>
+            </div>
+        </div>
     </div>
     <footer class="bg-light text-center text-lg-start">
         <!-- Copyright -->
