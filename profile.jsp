@@ -68,7 +68,7 @@
         </div>
     </div>
     <div style="min-height:92vh;" class="d-block">
-        <div style="position: fixed;left: 18%; width:70%">
+        <div style="position: relative;left: 18%; width:70%">
             <h2 class="d-flex mx-auto">User Profile</h2>
             <div>
 
@@ -121,33 +121,35 @@
                         </div>
                     </div>
 
-                    <button type="button" class="btn btn-primary" onclick="showpassword()">
+                    <button type="button" class="btn btn-danger float-end" onclick="showpassword()">
                         Change Password
                     </button>
 
-                    <div>
-                        <div class="form-group">
-                            <label for="email1">Email address</label>
-                            <input type="email" class="form-control" id="email1" aria-describedby="emailHelp"
-                                placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">Your information is safe with us.</small>
+                    <div class="ms-6 mb-5 mt-5" id="chgpwd" style="margin-left: 20%;display: none;">
+                        <div class="form-group mb-3">
+                            <label for="email1">Current Password</label>
+                            <input type="password" class="form-control" id="email1" aria-describedby="emailHelp"
+                                placeholder="Enter Current Password">
                         </div>
-                        <div class="form-group">
-                            <label for="password1">Password</label>
-                            <input type="password" class="form-control" id="password1" placeholder="Password">
+                        <div class="form-group mb-3">
+                            <label for="password1">New Password</label>
+                            <input type="password" class="form-control" id="password1" placeholder="Password"
+                                pattern="/^.{6,}$/">
                         </div>
-                        <div class="form-group">
-                            <label for="password1">Confirm Password</label>
-                            <input type="password" class="form-control" id="password2" placeholder="Confirm Password">
+                        <div class="form-group mb-3">
+                            <label for="password1">Confirm New Password</label>
+                            <input type="password" class="form-control" id="password2" placeholder="Confirm Password"
+                                pattern="/^.{6,}$/">
+                        </div>
+                        <div class=" border-top-0 d-flex justify-content-center">
+                            <button type="submit" class="btn btn-success">Submit</button>
                         </div>
                     </div>
-                    <div class=" border-top-0 d-flex justify-content-center">
-                        <button type="submit" class="btn btn-success">Submit</button>
-                    </div>
-
                 </div>
+
             </div>
         </div>
+    </div>
 
 
 
@@ -165,7 +167,12 @@
 </body>
 <script>
     function showpassword() {
-
+        var x = document.getElementById('chgpwd').style.display;
+        if (x == 'none') {
+            document.getElementById('chgpwd').style.display = "";
+        } else {
+            document.getElementById('chgpwd').style.display = "none";
+        }
     }
 </script>
 

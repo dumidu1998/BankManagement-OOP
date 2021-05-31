@@ -68,7 +68,7 @@
         </div>
     </div>
     <div style="min-height:92vh;" class="d-block">
-        <div style="position: fixed;left: 18%; width:70%">
+        <div style="position: relative;left: 18%; width:70%">
             <h2 class="d-flex mx-auto">Search User</h2>
             <div class="input-group mb-3 ms-3 mt-5">
                 <input type=" text" class="form-control" placeholder="Account Number, Name, ID No"
