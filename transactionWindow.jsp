@@ -68,7 +68,7 @@
         </div>
     </div>
     <div style="min-height:92vh;" class="d-block">
-        <div style="position: fixed;left: 18%; width:70%">
+        <div style="position: relative;left: 18%; width:70%">
             <h2 class="d-flex mx-auto">Transaction Window</h2>
             <div class="input-group mb-3 ms-3 mt-5">
                 <input type=" text" class="form-control" placeholder="Account Number" aria-label="Account Number"
@@ -116,6 +116,10 @@
                     </div>
                 </div>
                 <form method="POST" action="">
+                    <!-- TODO pass here the acc no & others if needed -->
+                    <input type="hidden" name="" value="">
+                    <input type="hidden" name="" value="">
+                    <input type="hidden" name="" value="">
                     <div class="row ms-5 mt-3">
                         <div class="form-check col-sm">
                             <input class="form-check-input" type="radio" name="transaction_type" id="flexRadioDefault1"
@@ -133,12 +137,21 @@
                     </div>
                     <div class="row ms-5 mt-3">
                         <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">Amount - Rs.</span>
+                            <span class="input-group-text">Amount - Rs.</span>
                             <input type="number" min="1" class="form-control" placeholder="Amount 500.00"
-                                aria-label="Username" aria-describedby="basic-addon1">
+                                aria-label="Username" onkeyup="disableagain()" id="amnt1"
+                                aria-describedby="basic-addon1">
                         </div>
-                        <input type="submit" class="btn btn-primary active" aria-current="page"
-                            value="Complete Transaction">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Retype Amount - Rs.</span>
+                            <input type="number" min="1" class="form-control" name="Amount" placeholder="Amount 500.00"
+                                aria-label="Username" aria-describedby="basic-addon1" id="amnt2" onfocus="checkamnt()"
+                                onkeyup="enabler()">
+                        </div>
+                        <input type="reset" style="width:130px;margin-left:100%;margin-bottom: 10px;"
+                            onclick="resetb()">
+                        <input type="submit" id="form-btn" disabled class="btn btn-primary active mb-5"
+                            aria-current="page" value="Complete Transaction">
                     </div>
                 </form>
             </div>
@@ -153,5 +166,42 @@
         <!-- Copyright -->
     </footer>
 </body>
+<script>
+
+    function checkamnt() {
+        var in1 = document.getElementById('amnt1');
+        var btn = document.getElementById('form-btn');
+        var in2 = document.getElementById('amnt2');
+        if (in1.value.length >= 1) {
+            in1.type = "password";
+        }
+    }
+    function disableagain() {
+        var in1 = document.getElementById('amnt1');
+        var btn = document.getElementById('form-btn');
+        var in2 = document.getElementById('amnt2');
+        if (in1.value == in2.value && in1.value >= 1 && in2.value >= 1) {
+        } else {
+            btn.setAttribute("disabled", "true");
+        }
+    }
+
+    function enabler() {
+        var in1 = document.getElementById('amnt1');
+        var btn = document.getElementById('form-btn');
+        var in2 = document.getElementById('amnt2');
+        if (in1.value == in2.value && in1.value >= 1 && in2.value >= 1) {
+            btn.removeAttribute("disabled");
+        } else {
+            btn.setAttribute("disabled", "true");
+        }
+    }
+
+    function resetb() {
+        var in1 = document.getElementById('amnt1');
+        in1.type = "text";
+    }
+
+</script>
 
 </html>

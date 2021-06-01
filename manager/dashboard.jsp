@@ -10,7 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Com Bank</title>
 </head>
 
@@ -45,7 +46,13 @@
                         <li>
                             <a href="userview.jsp" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-speedometer2"><img src="assets/profile.png" width="50px" alt=""></i>
-                                <span class="ms-1 d-none d-sm-inline" style="color: white;">Users</span> </a>
+                                <span class="ms-1 d-none d-sm-inline" style="color: white;">Customers</span> </a>
+
+                        </li>
+                        <li>
+                            <a href="userview.jsp" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2"><img src="assets/profile.png" width="50px" alt=""></i>
+                                <span class="ms-1 d-none d-sm-inline" style="color: white;">Cashiers</span> </a>
 
                         </li>
 
@@ -68,7 +75,7 @@
         </div>
     </div>
     <div style="min-height:92vh;" class="position-relative">
-        <div style="position: fixed;left: 18%">
+        <div style="position: relative;margin-right: 5px;margin-left: 18%; ">
             <div class="row mx-auto ms-5">
                 <h3 class="mx-auto mt-5">Today Summary</h3>
                 <div class="col">
@@ -104,18 +111,21 @@
                         <th>Tnx. Date</th>
                         <th>Acc. no</th>
                         <th>Amount(Cr./<span class="text-danger">Dr.</span>)</th>
+                        <th>cashier ID</th>
                     </tr>
                     <tr>
                         <td>002</td>
                         <td>2021/12/16</td>
                         <td>01583694</td>
                         <td class="text-danger">Rs. 250.00</td>
+                        <td>01583694</td>
                     </tr>
                     <tr>
                         <td>002</td>
                         <td>2021/12/16</td>
                         <td>01583694</td>
                         <td>Rs. 250.00</td>
+                        <td>01583694</td>
                     </tr>
                 </table>
             </div>

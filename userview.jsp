@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="admin/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Com Bank</title>
 </head>
 
@@ -83,6 +83,7 @@
                         <th>ID No.</th>
                         <th>Name</th>
                         <th>Balance</th>
+                        <th>Acc. Type</th>
                         <th>Action</th>
                     </tr>
                     <tr>
@@ -90,14 +91,16 @@
                         <td>972580125v</td>
                         <td>K.M.L. Gamage</td>
                         <td>Rs. 15,000.00</td>
-                        <td><a href="user.jsp?accno=1598412">View More</a></td>
+                        <td>Current</td>
+                        <td><a href="account.jsp?accno=1598412">View More</a></td>
                     </tr>
                     <tr>
                         <td>1598412</td>
                         <td>972580125v</td>
                         <td>K.M.L. Gamage</td>
                         <td>Rs. 15,000.00</td>
-                        <td><a href="user.jsp?accno=1598412">View More</a></td>
+                        <td>Savings</td>
+                        <td><a href="account.jsp?accno=1598412">View More</a></td>
                     </tr>
 
                 </table>

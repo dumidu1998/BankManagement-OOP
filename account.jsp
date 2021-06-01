@@ -45,13 +45,7 @@
                         <li>
                             <a href="userview.jsp" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-speedometer2"><img src="assets/profile.png" width="50px" alt=""></i>
-                                <span class="ms-1 d-none d-sm-inline" style="color: white;">Customers</span> </a>
-
-                        </li>
-                        <li>
-                            <a href="userview.jsp" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-speedometer2"><img src="assets/profile.png" width="50px" alt=""></i>
-                                <span class="ms-1 d-none d-sm-inline" style="color: white;">Cashiers</span> </a>
+                                <span class="ms-1 d-none d-sm-inline" style="color: white;">Users</span> </a>
 
                         </li>
 
@@ -74,7 +68,7 @@
         </div>
     </div>
     <div style="min-height:92vh;" class="d-block">
-        <div style="position: relative;left: 18%; width:70%">
+        <div style="position: relative;margin-right: 5px;margin-left: 18%; ">
             <h2 class="d-flex mx-auto">Transaction Window</h2>
             <div class="input-group mb-3 ms-3 mt-5">
                 <input type=" text" class="form-control" placeholder="Account Number" aria-label="Account Number"
@@ -121,37 +115,45 @@
                                 class="textnormh2">Rs.5,000.00</span></span>
                     </div>
                 </div>
-                <form method="POST" action="">
-                    <div class="row ms-5 mt-3">
-                        <div class="form-check col-sm">
-                            <input class="form-check-input" type="radio" name="transaction_type" id="flexRadioDefault1"
-                                checked>
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Deposit
-                            </label>
-                        </div>
-                        <div class="form-check col-sm">
-                            <input class="form-check-input" type="radio" name="transaction_type" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Withdrawal
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row ms-5 mt-3">
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">Amount - Rs.</span>
-                            <input type="number" min="1" class="form-control" placeholder="Amount 500.00"
-                                aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">Amount - Rs.</span>
-                            <input type="number" min="1" class="form-control" placeholder="Amount 500.00"
-                                aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
-                        <input type="submit" class="btn btn-primary active" aria-current="page"
-                            value="Complete Transaction">
-                    </div>
-                </form>
+                <div class="mx-auto me-5 mt-5">
+                    <table class="table table-success table-striped me-md-auto">
+                        <tr class="table-primary">
+                            <th>Tnx. Id</th>
+                            <th>Tnx. Date</th>
+                            <th>Acc. no</th>
+                            <th>Amount(Cr./<span class="text-danger">Dr.</span>)</th>
+                            <th>Balance</th>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>2021/12/16</td>
+                            <td>01583694</td>
+                            <td class="text-danger">Rs. 250.00</td>
+                            <td>Rs.2500</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>2021/12/16</td>
+                            <td>01583694</td>
+                            <td>Rs. 250.00</td>
+                            <td>Rs.1500</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>2021/12/16</td>
+                            <td>01583694</td>
+                            <td class="text-danger">Rs. 250.00</td>
+                            <td>Rs.2500</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>2021/12/16</td>
+                            <td>01583694</td>
+                            <td>Rs. 250.00</td>
+                            <td>Rs.1500</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

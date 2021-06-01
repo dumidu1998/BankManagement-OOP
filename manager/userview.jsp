@@ -45,7 +45,13 @@
                         <li>
                             <a href="userview.jsp" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-speedometer2"><img src="assets/profile.png" width="50px" alt=""></i>
-                                <span class="ms-1 d-none d-sm-inline aaactive" style="color: white;">Users</span> </a>
+                                <span class="ms-1 d-none d-sm-inline" style="color: white;">Customers</span> </a>
+
+                        </li>
+                        <li>
+                            <a href="userview.jsp" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2"><img src="assets/profile.png" width="50px" alt=""></i>
+                                <span class="ms-1 d-none d-sm-inline" style="color: white;">Cashiers</span> </a>
 
                         </li>
 
