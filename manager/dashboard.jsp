@@ -107,6 +107,10 @@
                     </div>
                 </div>
             </div>
+            <div class="mt-5  " style="margin-left: 40%;">
+                <button class="btn btn-primary active">Add New Account</button>
+                <!-- TODO model add -->
+            </div>
             <h2 class="mx-auto mt-5">Last Transactions</h2>
             <div class="mx-auto me-5">
                 <table class="table table-success table-striped me-md-auto">
