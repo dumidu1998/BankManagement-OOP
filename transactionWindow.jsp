@@ -70,7 +70,7 @@
     <div style="min-height:92vh;" class="d-block">
         <div style="position: relative;left: 18%; width:70%">
             <h2 class="d-flex mx-auto">Transaction Window</h2>
-            <div class="input-group mb-3 ms-3 mt-5">
+            <div class="input-group mb-3 ms-3 mt-3">
                 <input type=" text" class="form-control" placeholder="Account Number" aria-label="Account Number"
                     aria-describedby="button-addon2">
                 <button class="btn btn-outline-primary" type="button" id="button-addon2">🔍 Find</button>

@@ -79,24 +79,24 @@
             <div>
                 <table class="table table-striped table-hover ms-4">
                     <tr class="table-primary">
-                        <th>Acc. No</th>
                         <th>ID No.</th>
+                        <th>Acc. No</th>
                         <th>Name</th>
                         <th>Balance</th>
                         <th>Acc. Type</th>
                         <th>Action</th>
                     </tr>
                     <tr>
-                        <td>1598412</td>
                         <td>972580125v</td>
+                        <td>1598412</td>
                         <td>K.M.L. Gamage</td>
                         <td>Rs. 15,000.00</td>
                         <td>Current</td>
                         <td><a href="account.jsp?accno=1598412">View More</a></td>
                     </tr>
                     <tr>
-                        <td>1598412</td>
                         <td>972580125v</td>
+                        <td>1598412</td>
                         <td>K.M.L. Gamage</td>
                         <td>Rs. 15,000.00</td>
                         <td>Savings</td>

@@ -10,7 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Com Bank</title>
 </head>
 
@@ -23,20 +24,21 @@
                     class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 ">
                     <a href="#"
                         class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-5 d-none d-sm-inline"><img src="assets/logo.png" width="60px" alt=""> Com Bank
+                        <span class="fs-5 d-none d-sm-inline"><img src="../assets/logo.png" width="60px" alt=""> Com
+                            Bank
                         </span>
                     </a>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
                         id="menu">
                         <li class="nav-item">
                             <a href="dashboard.jsp" class="nav-link align-middle px-0 ">
-                                <i class="fs-4 bi-house"><img src="assets/dashboard.png" width="50px" alt=""></i> <span
-                                    class="ms-1 d-none d-sm-inline " style="color: white;">Dashboard</span>
+                                <i class="fs-4 bi-house"><img src="../assets/dashboard.png" width="50px" alt=""></i>
+                                <span class="ms-1 d-none d-sm-inline " style="color: white;">Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="transactionWindow.jsp" class="nav-link align-middle px-0 ">
-                                <i class="fs-4 bi-house"><img src="assets/trans.png" width="50px" alt=""></i>
+                                <i class="fs-4 bi-house"><img src="../assets/trans.png" width="50px" alt=""></i>
                                 <span class="ms-1 d-none d-sm-inline aaactive" style="color: white;">Transaction
                                     window
                                 </span>
@@ -44,13 +46,15 @@
                         </li>
                         <li>
                             <a href="userview.jsp" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-speedometer2"><img src="assets/profile.png" width="50px" alt=""></i>
+                                <i class="fs-4 bi-speedometer2"><img src="../assets/profile.png" width="50px"
+                                        alt=""></i>
                                 <span class="ms-1 d-none d-sm-inline" style="color: white;">Customers</span> </a>
 
                         </li>
                         <li>
                             <a href="userview.jsp" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-speedometer2"><img src="assets/profile.png" width="50px" alt=""></i>
+                                <i class="fs-4 bi-speedometer2"><img src="../assets/profile.png" width="50px"
+                                        alt=""></i>
                                 <span class="ms-1 d-none d-sm-inline" style="color: white;">Cashiers</span> </a>
 
                         </li>
@@ -60,7 +64,8 @@
                     <div class="dropdown pb-4">
                         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                             id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="assets/avatar.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <img src="../assets/avatar.png" alt="hugenerd" width="30" height="30"
+                                class="rounded-circle">
                             <span class="d-none d-sm-inline mx-1">Logged Name</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
@@ -76,7 +81,7 @@
     <div style="min-height:92vh;" class="d-block">
         <div style="position: relative;left: 18%; width:70%">
             <h2 class="d-flex mx-auto">Transaction Window</h2>
-            <div class="input-group mb-3 ms-3 mt-5">
+            <div class="input-group mb-3 ms-3 mt-3">
                 <input type=" text" class="form-control" placeholder="Account Number" aria-label="Account Number"
                     aria-describedby="button-addon2">
                 <button class="btn btn-outline-primary" type="button" id="button-addon2">🔍 Find</button>
@@ -122,6 +127,10 @@
                     </div>
                 </div>
                 <form method="POST" action="">
+                    <!-- TODO pass here the acc no & others if needed -->
+                    <input type="hidden" name="" value="">
+                    <input type="hidden" name="" value="">
+                    <input type="hidden" name="" value="">
                     <div class="row ms-5 mt-3">
                         <div class="form-check col-sm">
                             <input class="form-check-input" type="radio" name="transaction_type" id="flexRadioDefault1"
@@ -139,17 +148,21 @@
                     </div>
                     <div class="row ms-5 mt-3">
                         <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">Amount - Rs.</span>
+                            <span class="input-group-text">Amount - Rs.</span>
                             <input type="number" min="1" class="form-control" placeholder="Amount 500.00"
-                                aria-label="Username" aria-describedby="basic-addon1">
+                                aria-label="Username" onkeyup="disableagain()" id="amnt1"
+                                aria-describedby="basic-addon1">
                         </div>
                         <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">Amount - Rs.</span>
-                            <input type="number" min="1" class="form-control" placeholder="Amount 500.00"
-                                aria-label="Username" aria-describedby="basic-addon1">
+                            <span class="input-group-text">Retype Amount - Rs.</span>
+                            <input type="number" min="1" class="form-control" name="Amount" placeholder="Amount 500.00"
+                                aria-label="Username" aria-describedby="basic-addon1" id="amnt2" onfocus="checkamnt()"
+                                onkeyup="enabler()">
                         </div>
-                        <input type="submit" class="btn btn-primary active" aria-current="page"
-                            value="Complete Transaction">
+                        <input type="reset" style="width:130px;margin-left:100%;margin-bottom: 10px;"
+                            onclick="resetb()">
+                        <input type="submit" id="form-btn" disabled class="btn btn-primary active mb-5"
+                            aria-current="page" value="Complete Transaction">
                     </div>
                 </form>
             </div>
@@ -164,5 +177,42 @@
         <!-- Copyright -->
     </footer>
 </body>
+<script>
+
+    function checkamnt() {
+        var in1 = document.getElementById('amnt1');
+        var btn = document.getElementById('form-btn');
+        var in2 = document.getElementById('amnt2');
+        if (in1.value.length >= 1) {
+            in1.type = "password";
+        }
+    }
+    function disableagain() {
+        var in1 = document.getElementById('amnt1');
+        var btn = document.getElementById('form-btn');
+        var in2 = document.getElementById('amnt2');
+        if (in1.value == in2.value && in1.value >= 1 && in2.value >= 1) {
+        } else {
+            btn.setAttribute("disabled", "true");
+        }
+    }
+
+    function enabler() {
+        var in1 = document.getElementById('amnt1');
+        var btn = document.getElementById('form-btn');
+        var in2 = document.getElementById('amnt2');
+        if (in1.value == in2.value && in1.value >= 1 && in2.value >= 1) {
+            btn.removeAttribute("disabled");
+        } else {
+            btn.setAttribute("disabled", "true");
+        }
+    }
+
+    function resetb() {
+        var in1 = document.getElementById('amnt1');
+        in1.type = "text";
+    }
+
+</script>
 
 </html>
