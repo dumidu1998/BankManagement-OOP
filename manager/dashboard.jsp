@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-        crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Com Bank</title>
@@ -108,8 +105,82 @@
                 </div>
             </div>
             <div class="mt-5  " style="margin-left: 40%;">
-                <button class="btn btn-primary active">Add New Account</button>
-                <!-- TODO model add -->
+
+                <button type="button" class="btn btn-primary active" data-bs-toggle="modal"
+                    data-bs-target="#addaccmodal">
+                    Add New Account</button>
+
+                <div class="modal  fade " id="addaccmodal" data-bs-backdrop="static" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Create New Account</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="recipient-name" class="col-form-label">First Name</label>
+                                                <input type="text" class="form-control inpwidth" id="recipient-name">
+                                            </div>
+                                            <div class="col-md-4 ms-auto">
+                                                <label for="recipient-name" class="col-form-label">Last Name</label>
+                                                <input type="text" class="form-control inpwidth" id="recipient-name">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="recipient-name" class="col-form-label">ID No.</label>
+                                                <input type="text" class="form-control inpwidth" id="recipient-name">
+                                            </div>
+                                            <div class="col-md-4 ms-auto">
+                                                <label for="recipient-name" class="col-form-label">Gender</label>
+                                                <select class="form-select inpwidth" id="recipient-name">
+                                                    <option selected hidden>SELECT ONE</option>
+                                                    <option value="m">Male</option>
+                                                    <option value="f">Female</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="recipient-name" class="col-form-label">DOB</label>
+                                                <input type="date" class="form-control inpwidth" id="recipient-name">
+                                            </div>
+                                            <div class="col-md-4 ms-auto">
+                                                <label for="recipient-name" class="col-form-label">Email</label>
+                                                <input type="email" class="form-control inpwidth" id="recipient-name">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="recipient-name" class="col-form-label">ID No.</label>
+                                                <input type="text" class="form-control inpwidth" id="recipient-name">
+                                            </div>
+                                            <div class="col-md-4 ms-auto">
+                                                <label for="recipient-name" class="col-form-label">Gender</label>
+                                                <select class="form-select inpwidth" id="recipient-name">
+                                                    <option selected hidden>SELECT ONE</option>
+                                                    <option value="m">Male</option>
+                                                    <option value="f">Female</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <h2 class="mx-auto mt-5">Last Transactions</h2>
             <div class="mx-auto me-5">
@@ -147,6 +218,13 @@
         </div>
         <!-- Copyright -->
     </footer>
+
+
+
 </body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
 
 </html>

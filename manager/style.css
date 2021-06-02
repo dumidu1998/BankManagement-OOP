@@ -276,3 +276,13 @@ p.text span {
         box-shadow: inset 0px 0px 0px 30px #4bb71b;
     }
 }
+
+
+.modal-ku {
+  width: 100%;
+  margin: auto;
+}
+
+.inpwidth{
+  width:200px !important;
+}
