@@ -140,7 +140,7 @@
                                             <div class="col-md-4 ms-auto">
                                                 <label for="recipient-name" class="col-form-label">Gender</label>
                                                 <select class="form-select inpwidth" id="recipient-name">
-                                                    <option selected hidden>SELECT ONE</option>
+                                                    <option hidden>SELECT ONE</option>
                                                     <option value="m">Male</option>
                                                     <option value="f">Female</option>
                                                 </select>
@@ -162,11 +162,11 @@
                                                 <input type="text" class="form-control inpwidth" id="recipient-name">
                                             </div>
                                             <div class="col-md-4 ms-auto">
-                                                <label for="recipient-name" class="col-form-label">Gender</label>
+                                                <label for="recipient-name" class="col-form-label">Account Type</label>
                                                 <select class="form-select inpwidth" id="recipient-name">
-                                                    <option selected hidden>SELECT ONE</option>
-                                                    <option value="m">Male</option>
-                                                    <option value="f">Female</option>
+                                                    <option hidden>SELECT ONE</option>
+                                                    <option value="S">Savings</option>
+                                                    <option value="C">Current</option>
                                                 </select>
                                             </div>
                                         </div>
