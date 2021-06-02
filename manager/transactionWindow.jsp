@@ -52,7 +52,7 @@
 
                         </li>
                         <li>
-                            <a href="userview.jsp" class="nav-link px-0 align-middle">
+                            <a href="cashiers.jsp" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-speedometer2"><img src="../assets/profile.png" width="50px"
                                         alt=""></i>
                                 <span class="ms-1 d-none d-sm-inline" style="color: white;">Cashiers</span> </a>
@@ -105,22 +105,12 @@
                     <div class="col-sm"><span class="h5">Email: <span class="textnorm">-</span></span></div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-sm"><span class="h5">Ad. L 1: <span class="textnorm">Abaya Road</span></span>
+                    <div class="col-sm"><span class="h5">Address:
+                            <textarea class="form-control" rows="3">Abaya Road,.&#13;&#10;Galpalama.&#13;&#10;Anuradhapura
+                            </textarea>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm"><span class="h5">Ad L 2: <span class="textnorm">-</span></span></div>
-                </div>
-                <div class="row">
-                    <div class="col-sm"><span class="h5">City: <span class="textnorm">Anuradhapura</span></span></div>
-                </div>
-                <div class="row">
-                    <div class="col-sm"><span class="h5">District: <span class="textnorm">Anuradhapura</span></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm"><span class="h5">ZIP: <span class="textnorm">50000</span></span></div>
-                </div>
+
                 <div class="row mt-3 bg-light mx-auto">
                     <div class=" col-sm" style="margin-left:35%"><span class="h2">Balance: <span
                                 class="textnormh2">Rs.5,000.00</span></span>
