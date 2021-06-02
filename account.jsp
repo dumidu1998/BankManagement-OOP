@@ -69,12 +69,8 @@
     </div>
     <div style="min-height:92vh;" class="d-block">
         <div style="position: relative;margin-right: 5px;margin-left: 18%; ">
-            <h2 class="d-flex mx-auto">Transaction Window</h2>
-            <div class="input-group mb-3 ms-3 mt-5">
-                <input type=" text" class="form-control" placeholder="Account Number" aria-label="Account Number"
-                    aria-describedby="button-addon2">
-                <button class="btn btn-outline-primary" type="button" id="button-addon2">🔍 Find</button>
-            </div>
+            <h2 class="d-flex mx-auto">Account Info Window</h2>
+
             <!--  open only after submitting the acc no -->
             <div>
                 <div class="row mb-3">
@@ -116,6 +112,7 @@
                     </div>
                 </div>
                 <div class="mx-auto me-5 mt-5">
+                    <h3 class="mt-1 mb-3">Transactions</h3>
                     <table class="table table-success table-striped me-md-auto">
                         <tr class="table-primary">
                             <th>Tnx. Id</th>

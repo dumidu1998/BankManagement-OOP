@@ -80,18 +80,19 @@
         <div style="position: relative;left: 18%; width:70%">
             <h2 class="d-flex mx-auto">Search User</h2>
             <button type="button" class="btn btn-primary active" data-bs-toggle="modal" data-bs-target="#addaccmodal">
-                Add New Account</button>
+                Add New Cashier</button>
 
             <div class="modal  fade " id="addaccmodal" data-bs-backdrop="static" tabindex="-1"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Create New Account</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Create New Cashier Account</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <form>
+                                <!-- TODO -->
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-4">
@@ -107,56 +108,37 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <label for="recipient-lname" class="col-form-label">ID No.</label>
-                                            <input type="text" class="form-control inpwidth" name="id"
-                                                id="recipient-lname">
-                                        </div>
-                                        <div class="col-md-4 ms-auto">
-                                            <label for="recipient-gender" class="col-form-label">Gender</label>
-                                            <select class="form-select inpwidth" id="recipient-gender" name="gender">
-                                                <option hidden>SELECT ONE</option>
-                                                <option value="m">Male</option>
-                                                <option value="f">Female</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <label for="recipient-dob" class="col-form-label">DOB</label>
-                                            <input type="date" class="form-control inpwidth" name="dob"
-                                                id="recipient-dob">
-                                        </div>
-                                        <div class="col-md-4 ms-auto">
                                             <label for="recipient-email" class="col-form-label">Email</label>
-                                            <input type="email" class="form-control inpwidth" name="email"
+                                            <input type="text" class="form-control inpwidth" name="email"
                                                 id="recipient-email">
                                         </div>
+                                        <div class="col-md-4 ms-auto">
+                                            <label for="recipient-mobile" class="col-form-label">Phone Number</label>
+                                            <input type="text" class="form-control inpwidth" name="mobile"
+                                                id="recipient-mobile">
+                                        </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-4">
-                                            <label for="recipient-address" class="col-form-label">Address</label>
-                                            <textarea class="form-control" id="recipient-address" name="address"
-                                                rows="3">Abaya Road,.&#13;&#10;Galpalama.&#13;&#10;Anuradhapura
-                                                </textarea>
+                                        <div class="col-md-6">
+                                            <label for="recipient-url" class="col-form-label">Profile Image
+                                                URL</label>
+                                            <input type="text" class="form-control inpwidth" name="profileurl"
+                                                id="recipient-url">
                                         </div>
                                         <div class="col-md-4 ms-auto">
-                                            <label for="recipient-actype" class="col-form-label">Account
-                                                Type</label>
-                                            <select class="form-select inpwidth" id="recipient-actype" name="actype">
-                                                <option hidden>SELECT ONE</option>
-                                                <option value="S">Savings</option>
-                                                <option value="C">Current</option>
-                                            </select>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <label for="recipient-indepo" class="col-form-label">Initial
-                                                Deposit</label>
-                                            <input type="number" min="100" class="form-control inpwidth"
-                                                id="recipient-indepo" name="initialdeposit">
+                                            <label for="recipient-pwd" class="col-form-label">Password</label>
+                                            <input type="text" class="form-control inpwidth" id="recipient-pwd">
                                         </div>
-
+                                        <div class="col-md-4 ms-auto">
+                                            <label for="recipient-mobile" class="col-form-label">Confirm
+                                                Password</label>
+                                            <input type="text" class="form-control inpwidth" name="pwd"
+                                                id="recipient-cpwd">
+                                        </div>
                                     </div>
                                 </div>
                         </div>
@@ -215,5 +197,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
     crossorigin="anonymous"></script>
+<script>
+
+</script>
 
 </html>

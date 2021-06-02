@@ -39,7 +39,7 @@
                         <li class="nav-item">
                             <a href="transactionWindow.jsp" class="nav-link align-middle px-0 ">
                                 <i class="fs-4 bi-house"><img src="../assets/trans.png" width="50px" alt=""></i>
-                                <span class="ms-1 d-none d-sm-inline aaactive" style="color: white;">Transaction
+                                <span class="ms-1 d-none d-sm-inline " style="color: white;">Transaction
                                     window
                                 </span>
                             </a>
@@ -55,7 +55,8 @@
                             <a href="userview.jsp" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-speedometer2"><img src="../assets/profile.png" width="50px"
                                         alt=""></i>
-                                <span class="ms-1 d-none d-sm-inline" style="color: white;">Cashiers</span> </a>
+                                <span class="ms-1 d-none d-sm-inline aaactive" style="color: white;">Cashiers</span>
+                            </a>
 
                         </li>
 
