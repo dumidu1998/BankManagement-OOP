@@ -104,11 +104,19 @@
                     </div>
                 </div>
             </div>
+            <h4 style="margin-top: 30px;">Create New Account</h4>
             <div class="mt-5  " style="margin-left: 40%;">
-
-                <button type="button" class="btn btn-primary active" data-bs-toggle="modal"
+                <button type="button" class="btn btn-primary active me-5" data-bs-toggle="modal"
                     data-bs-target="#addaccmodal">
-                    Add New Account</button>
+                    New Customer</button>
+                <button type="button" class="btn btn-primary active" data-bs-toggle="modal"
+                    data-bs-target="#addaccmodal2">
+                    Existing Customer</button>
+
+
+
+
+
 
                 <div class="modal  fade " id="addaccmodal" data-bs-backdrop="static" tabindex="-1"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -171,6 +179,74 @@
                                             </div>
                                             <div class="col-md-4 ms-auto">
                                                 <label for="recipient-actype" class="col-form-label">Account
+                                                    Type</label>
+                                                <select class="form-select inpwidth" id="recipient-actype" name="actype"
+                                                    required>
+                                                    <option hidden>SELECT ONE</option>
+                                                    <option value="S">Savings</option>
+                                                    <option value="C">Current</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="recipient-indepo" class="col-form-label">Initial
+                                                    Deposit (Rs.)</label>
+                                                <input type="number" min="100" class="form-control inpwidth"
+                                                    id="recipient-indepo" name="initialdeposit" required>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal  fade " id="addaccmodal2" data-bs-backdrop="static" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Create New Account</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-6 input-group">
+                                                <label for="recipient-fname" class="col-form-label">NIC Number</label>
+                                                <input type="text" class="form-control inpwidth ms-3"
+                                                    aria-describedby="receipient-id" name="fname" id="recipient-fname"
+                                                    required>
+                                                <button class="btn btn-outline-secondary" type="button"
+                                                    id="receipient-id">Search 🔍</button>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="recipient-fname" class="col-form-label">First Name</label>
+                                                <input type="text" class="form-control inpwidth" name="fname"
+                                                    id="recipient-fname" required>
+                                            </div>
+                                            <div class="col-md-4 ms-auto">
+                                                <label for="recipient-name" class="col-form-label">Last Name</label>
+                                                <input type="text" class="form-control inpwidth" name="lname"
+                                                    id="recipient-name" required>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 ms-auto input-group mt-3">
+                                                <label for="recipient-actype" class="col-form-label me-3">Account
                                                     Type</label>
                                                 <select class="form-select inpwidth" id="recipient-actype" name="actype"
                                                     required>
