@@ -70,7 +70,9 @@
     <div style="min-height:92vh;" class="d-block">
         <div style="position: relative;margin-right: 5px;margin-left: 18%; ">
             <h2 class="d-flex mx-auto">Account Info Window</h2>
-
+            <!--  -->
+            <!--  -->
+            <!--  -->
             <!--  open only after submitting the acc no -->
             <div>
                 <div class="row mb-3">
